@@ -61,6 +61,10 @@ export function readInitialUrlState(dispatch: React.Dispatch<Action>, state: App
   if (layers !== null) {
     applyLayersFromUrl(layers, dispatch, state.layers);
   }
+  // Read-only deep link to the provenance sheet (not written back to the URL).
+  if (params.get('methodology') === '1' && !state.methodologyOpen) {
+    dispatch({ type: 'TOGGLE_METHODOLOGY' });
+  }
 }
 
 export function useUrlSync(state: AppState) {

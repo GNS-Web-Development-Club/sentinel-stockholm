@@ -332,7 +332,7 @@ function HeroImage({
         }}
       />
       <div className="hero-image-strip">
-        <span>NASA EOSDIS · MODIS Terra true colour</span>
+        <span>MODIS Terra · NASA GIBS</span>
         <span>{tOffset === 0 ? 'Advisory day' : tOffset < 0 ? `T${tOffset} d` : `T+${tOffset} d`}</span>
       </div>
     </div>
